@@ -1,0 +1,18 @@
+<div class="product">
+  <h2>
+    <% if display_link_to_show %>
+      <h2><%= link_to product.name, product %></h2>
+    <% else %>
+      <%= product.name %>
+    <% end if %>
+  </h2>
+
+  <p>
+    <%= product.description %>
+  </p>
+
+  <p>
+    <strong>Price:</strong>
+    <%= number_to_currency(product.price) %>
+  </p>
+</div>
